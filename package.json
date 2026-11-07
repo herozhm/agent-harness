@@ -1,0 +1,23 @@
+{
+  "name": "agent-harness",
+  "version": "0.1.0",
+  "description": "A minimal, framework-free agent harness: loop, tools, context management, guardrails, verification, observability.",
+  "type": "module",
+  "main": "dist/loop.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test dist/test/loop.test.js",
+    "demo": "npm run build && node dist/src/cli.js --mock",
+    "demo:llm": "npm run build && node dist/src/cli.js"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "@types/node": "^20.14.0"
+  }
+}
